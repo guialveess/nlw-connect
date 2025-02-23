@@ -54,11 +54,6 @@ export type GetSubscriberRankingPosition200 = {
  * @summary Subscribe to event
  */
 
-/** export const getSubscribeToEventUrl = () => {
-  // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
-  return `http://localhost:3333/subscriptions`
-} **/
-
 export const getSubscribeToEventUrl = () => {
   // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
   return `https://nlw-connect-server.onrender.com/subscriptions`
@@ -145,7 +140,7 @@ export const getRanking = async (
 } **/
 
 export const getGetSubscriberInviteCountUrl = (subscriberId: string) => {
-  return `http://localhost:3333/subscribers/${subscriberId}/ranking/count`
+  return `https://nlw-connect-server.onrender.com/subscribers/${subscriberId}/ranking/count`
 }
 
 export const getSubscriberInviteCount = async (
