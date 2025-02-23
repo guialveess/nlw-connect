@@ -80,10 +80,6 @@ export const subscribeToEvent = async (
  * @summary Access invite link
  */
 
-/** export const getAccessInviteLinkUrl = (subscriberId: string) => {
-  return `http://localhost:3333/invites/${subscriberId}`
-} **/
-
 export const getAccessInviteLinkUrl = (subscriberId: string) => {
   return `https://nlw-connect-server.onrender.com/invites/${subscriberId}`
 }
@@ -106,11 +102,6 @@ export const accessInviteLink = async (
 /**
  * @summary Get ranking
  */
-
-/** export const getGetRankingUrl = () => {
-  // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
-  return `http://localhost:3333/ranking`
-} **/
 
 export const getGetRankingUrl = () => {
   // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
@@ -135,10 +126,6 @@ export const getRanking = async (
  * @summary Get subscriber ranking invites count
  */
 
-/** export const getGetSubscriberInviteCountUrl = (subscriberId: string) => {
-  return `http://localhost:3333/subscribers/${subscriberId}/ranking/count`
-} **/
-
 export const getGetSubscriberInviteCountUrl = (subscriberId: string) => {
   return `https://nlw-connect-server.onrender.com/subscribers/${subscriberId}/ranking/count`
 }
@@ -162,10 +149,6 @@ export const getSubscriberInviteCount = async (
  * @summary Get subscriber ranking invites clicks count
  */
 
-/**export const getGetSubscriberInviteClicksUrl = (subscriberId: string) => {
-  return `http://localhost:3333/subscribers/${subscriberId}/ranking/clicks`
-} **/
-
 export const getGetSubscriberInviteClicksUrl = (subscriberId: string) => {
   return `https://nlw-connect-server.onrender.com/subscribers/${subscriberId}/ranking/clicks`
 }
@@ -188,10 +171,6 @@ export const getSubscriberInviteClicks = async (
 /**
  * @summary Get subscriber ranking position
  */
-/** 
-export const getGetSubscriberRankingPositionUrl = (subscriberId: string) => {
-  return `http://localhost:3333/subscribers/${subscriberId}/ranking/position`
-} **/
 
 export const getGetSubscriberRankingPositionUrl = (subscriberId: string) => {
   return `https://nlw-connect-server.onrender.com/subscribers/${subscriberId}/ranking/position`
