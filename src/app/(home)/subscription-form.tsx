@@ -28,10 +28,10 @@ export default function SubscriptionForm() {
     resolver: zodResolver(subscriptionSchema),
   })
 
-  async function onSubscribe({name, email}: SubscriptionSchema) {
+  async function onSubscribe({ name, email }: SubscriptionSchema) {
     const referrer = searchParams.get('referrer')
-    
-    const {subscriberId} = await subscribeToEvent({name, email, referrer})
+
+    const { subscriberId } = await subscribeToEvent({ name, email, referrer })
 
     router.push(`/invite/${subscriberId}`)
   }
