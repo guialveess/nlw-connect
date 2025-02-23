@@ -53,9 +53,15 @@ export type GetSubscriberRankingPosition200 = {
 /**
  * @summary Subscribe to event
  */
-export const getSubscribeToEventUrl = () => {
+
+/** export const getSubscribeToEventUrl = () => {
   // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
   return `http://localhost:3333/subscriptions`
+} **/
+
+export const getSubscribeToEventUrl = () => {
+  // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
+  return `https://nlw-connect-server.onrender.com/subscriptions`
 }
 
 export const subscribeToEvent = async (
@@ -78,8 +84,13 @@ export const subscribeToEvent = async (
 /**
  * @summary Access invite link
  */
-export const getAccessInviteLinkUrl = (subscriberId: string) => {
+
+/** export const getAccessInviteLinkUrl = (subscriberId: string) => {
   return `http://localhost:3333/invites/${subscriberId}`
+} **/
+
+export const getAccessInviteLinkUrl = (subscriberId: string) => {
+  return `https://nlw-connect-server.onrender.com/invites/${subscriberId}`
 }
 
 export const accessInviteLink = async (
@@ -100,9 +111,15 @@ export const accessInviteLink = async (
 /**
  * @summary Get ranking
  */
-export const getGetRankingUrl = () => {
+
+/** export const getGetRankingUrl = () => {
   // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
   return `http://localhost:3333/ranking`
+} **/
+
+export const getGetRankingUrl = () => {
+  // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
+  return `https://nlw-connect-server.onrender.com/ranking`
 }
 
 export const getRanking = async (
@@ -122,6 +139,11 @@ export const getRanking = async (
 /**
  * @summary Get subscriber ranking invites count
  */
+
+/** export const getGetSubscriberInviteCountUrl = (subscriberId: string) => {
+  return `http://localhost:3333/subscribers/${subscriberId}/ranking/count`
+} **/
+
 export const getGetSubscriberInviteCountUrl = (subscriberId: string) => {
   return `http://localhost:3333/subscribers/${subscriberId}/ranking/count`
 }
@@ -144,8 +166,13 @@ export const getSubscriberInviteCount = async (
 /**
  * @summary Get subscriber ranking invites clicks count
  */
-export const getGetSubscriberInviteClicksUrl = (subscriberId: string) => {
+
+/**export const getGetSubscriberInviteClicksUrl = (subscriberId: string) => {
   return `http://localhost:3333/subscribers/${subscriberId}/ranking/clicks`
+} **/
+
+export const getGetSubscriberInviteClicksUrl = (subscriberId: string) => {
+  return `https://nlw-connect-server.onrender.com/subscribers/${subscriberId}/ranking/clicks`
 }
 
 export const getSubscriberInviteClicks = async (
@@ -166,8 +193,13 @@ export const getSubscriberInviteClicks = async (
 /**
  * @summary Get subscriber ranking position
  */
+/** 
 export const getGetSubscriberRankingPositionUrl = (subscriberId: string) => {
   return `http://localhost:3333/subscribers/${subscriberId}/ranking/position`
+} **/
+
+export const getGetSubscriberRankingPositionUrl = (subscriberId: string) => {
+  return `https://nlw-connect-server.onrender.com/subscribers/${subscriberId}/ranking/position`
 }
 
 export const getSubscriberRankingPosition = async (
