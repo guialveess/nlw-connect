@@ -1,11 +1,11 @@
 'use client'
-
 import { Button } from '@/components/button'
 import { InputField, InputIcon, InputRoot } from '@/components/input'
 import { subscribeToEvent } from '@/http/api'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { ArrowRight, Mail, User } from 'lucide-react'
 import { useRouter, useSearchParams } from 'next/navigation'
+import React, { Suspense } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
@@ -16,7 +16,7 @@ const subscriptionSchema = z.object({
 
 type SubscriptionSchema = z.infer<typeof subscriptionSchema>
 
-export default function SubscriptionForm() {
+function SubscriptionFormContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -88,5 +88,13 @@ export default function SubscriptionForm() {
         <ArrowRight className="size-5" />
       </Button>
     </form>
+  )
+}
+
+export default function SubscriptionForm() {
+  return (
+    <Suspense fallback={<div>Carregando...</div>}>
+      <SubscriptionFormContent />
+    </Suspense>
   )
 }
