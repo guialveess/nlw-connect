@@ -1,15 +1,30 @@
-import Image from 'next/image'
-
 import { getRanking } from '@/http/api'
+import Image from 'next/image'
 import cooper from '../../../assets/medal-cooper.svg'
 import gold from '../../../assets/medal-gold.svg'
 import silver from '../../../assets/medal-silver.svg'
 
 export async function Ranking() {
-  // Obtendo o ranking da API
-  const { ranking } = await getRanking()
+  let ranking = []
 
-  // Verificando se a resposta é válida (um array)
+  try {
+    // Tentando obter o ranking da API
+    const response = await getRanking()
+
+    // Verificando se a resposta possui a estrutura esperada
+    ranking = response?.ranking || []
+    console.log('Ranking:', ranking) // Debug: Verificando o conteúdo da resposta da API
+  } catch (error) {
+    // Capturando erro de requisição
+    console.error('Erro ao carregar o ranking:', error)
+    return (
+      <p className="text-gray-300">
+        Não foi possível carregar o ranking. Tente novamente mais tarde.
+      </p>
+    )
+  }
+
+  // Verificando se a resposta é um array válido
   if (!Array.isArray(ranking)) {
     return (
       <p className="text-gray-300">

@@ -10,7 +10,7 @@ export default defineConfig({
       httpClient: 'fetch',
       clean: true,
       //baseUrl: 'http://localhost:3333',
-      baseUrl: 'https://nlw-connect-three.vercel.app',
+      baseUrl: 'https://nlw-connect-server.onrender.com',
 
       override: {
         fetch: {
