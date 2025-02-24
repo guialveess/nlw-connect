@@ -16,7 +16,7 @@ export default async function InvitePage(props: InvitePageProps) {
   // Define a URL de acordo com o ambiente
   const inviteLink =
     process.env.NODE_ENV === 'production'
-      ? `https://nlw-connect-three.vercel.app/invites/${subscriberId}`
+      ? `https://nlw-connect-server.onrender.com/invites/${subscriberId}`
       : `http://localhost:3333/invites/${subscriberId}`
 
   return (
