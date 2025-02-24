@@ -13,7 +13,11 @@ interface InvitePageProps {
 export default async function InvitePage(props: InvitePageProps) {
   const { subscriberId } = await props.params
 
-  const inviteLink = `http://localhost:3333/invites/${subscriberId}`
+  // Define a URL de acordo com o ambiente
+  const inviteLink =
+    process.env.NODE_ENV === 'production'
+      ? `https://nlw-connect-three.vercel.app/invites/${subscriberId}`
+      : `http://localhost:3333/invites/${subscriberId}`
 
   return (
     <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
