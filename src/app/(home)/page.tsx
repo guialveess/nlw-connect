@@ -11,7 +11,7 @@ export default function Home() {
 
         <h1 className="text-4xl text-center font-heading flex flex-col gap-2 font-medium md:text-7xl md:text-left">
           <span className="text-blue">CodeCraft</span>
-          Submit 2025
+          Submit 2024
         </h1>
       </div>
       <div className="flex gap-5 items-stretch flex-col md:flex-row ">
